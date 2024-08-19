@@ -1,0 +1,15 @@
+form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  input, select {
+    margin-bottom: 10px;
+  }
+  

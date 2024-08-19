@@ -1,0 +1,67 @@
+<form [formGroup]="employeesForm" class="row g-3" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstName" formControlName="firstName">
+      <div *ngIf="employeesForm.get('firstName')?.invalid && employeesForm.get('firstName')?.touched" class="text-danger">
+        First Name is required.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" formControlName="lastName">
+      <div *ngIf="employeesForm.get('lastName')?.invalid && employeesForm.get('lastName')?.touched" class="text-danger">
+        Last Name is required.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="userName" class="form-label">Username</label>
+      <input type="text" class="form-control" id="userName" formControlName="userName">
+      <div *ngIf="employeesForm.get('userName')?.invalid && employeesForm.get('userName')?.touched" class="text-danger">
+        Username is required.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" formControlName="email">
+      <div *ngIf="employeesForm.get('email')?.invalid && employeesForm.get('email')?.touched" class="text-danger">
+        Valid Email is required.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" formControlName="password">
+      <div *ngIf="employeesForm.get('password')?.invalid && employeesForm.get('password')?.touched" class="text-danger">
+        Password is required.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="gender" class="form-label">Gender</label>
+      <select id="gender" class="form-select" formControlName="gender">
+        <option selected value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <div *ngIf="employeesForm.get('gender')?.invalid && employeesForm.get('gender')?.touched" class="text-danger">
+        Gender is required.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" formControlName="city">
+      <div *ngIf="employeesForm.get('city')?.invalid && employeesForm.get('city')?.touched" class="text-danger">
+        City is required.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="inputSalary" class="form-label">Salary</label>
+      <input type="number" class="form-control" id="inputSalary" formControlName="salary">
+      <div *ngIf="employeesForm.get('salary')?.invalid && employeesForm.get('salary')?.touched" class="text-danger">
+        Salary must be a positive number.
+      </div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-secondary" (click)="cancelForm()">Cancel</button>
+    </div>
+  </form>
+  
