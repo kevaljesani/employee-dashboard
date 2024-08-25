@@ -26,7 +26,7 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb+srv://Keval:Fl499zpg947hrlNC@cluster0.qtuxtim.mongodb.net/employess?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_DB, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
