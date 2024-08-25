@@ -37,7 +37,11 @@ const EmployeeSchema = mongoose.Schema({
     city:{
         type:String,
         require:true
-    }
+    },
+    audioFile: {
+        type: String, // Store the filename or file path
+        required: false
+      }
  
 },
     {
