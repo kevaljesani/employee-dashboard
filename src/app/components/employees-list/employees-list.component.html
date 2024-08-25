@@ -2,6 +2,7 @@
     <!-- <span class="material-icons edit-icon" style="font-size: 50px;">
         person_add
         </span> -->
+      <button (click)="logout()" class="btn btn-danger">Logout</button>
     <h2>Employees List</h2>
     <table class="table table-hover">
       <thead class="table-dark">
@@ -16,7 +17,7 @@
         </tr>
       </thead>
       <tbody>
-        @for (item of employeesList; track $index) {
+        @for (item of employeesList | paginate: { itemsPerPage: itemsPerPage, currentPage: page };  track $index ) {
             <tr>
               <td>{{item.firstName}}</td>
               <td>{{item.lastName}}</td>
@@ -27,6 +28,7 @@
               <td>
                 <span class="material-icons edit-icon" (click)="editRecords(item)">edit</span>
                 <span class="material-icons delete-icon" (click)="openDeleteModal(item)">delete</span>
+                <span class="material-icons play_arrow" (click)="playAudio(item)">play_arrow</span>
               </td>
             </tr>
            
@@ -40,9 +42,13 @@
         }
       </tbody>
     </table>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
   </div>
 
   <app-confirmation
   [selectedItem]="selectedItem"
   (deleteConfirmed)="handleDelete()">
 </app-confirmation>
+<!-- <audio #audioPlayer controls hidden></audio> -->
+<div #waveform></div>
+<!-- <app-audio-player></app-audio-player> -->

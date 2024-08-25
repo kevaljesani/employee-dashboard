@@ -1,0 +1,51 @@
+<p>register works!</p>
+<div class="container-fluid d-flex align-items-center justify-content-center min-vh-100">
+    <div class="form-box shadow p-4 rounded">
+      <h2 class="form-title text-center mb-4">Register</h2>
+      <form [formGroup]="registerForm" class="login-form">
+        <!-- Email input -->
+
+        <div class="form-outline mb-3">
+            <label class="form-label" for="form2Example1">Email</label>
+            <input formControlName="username" type="text" id="form2Example1" class="form-control input" />
+            <span class="text-danger" *ngIf="registerForm.hasError('required', 'username') && registerForm.controls['username'].dirty">
+              *This field is required
+            </span>
+            <span class="text-danger" *ngIf="registerForm.controls['username']?.errors?.['email'] && registerForm.controls['username']?.touched">
+              *Invalid email format
+            </span>
+          </div>
+
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example1">Email</label>
+          <input formControlName="username" type="text" id="form2Example1" class="form-control input" />
+          <span class="text-danger" *ngIf="registerForm.hasError('required', 'username') && registerForm.controls['username'].dirty">
+            *This field is required
+          </span>
+          <span class="text-danger" *ngIf="registerForm.controls['username']?.errors?.['email'] && registerForm.controls['username']?.touched">
+            *Invalid email format
+          </span>
+        </div>
+  
+        <!-- Password input -->
+        <div class="form-outline mb-3">
+          <label class="form-label" for="form2Example2">Password</label>
+          <input formControlName="password" type="password" id="form2Example2" class="form-control input" />
+          <span class="text-danger" *ngIf="registerForm.hasError('required', 'password') && registerForm.controls['password'].dirty">
+            *This field is required
+          </span>
+          <span class="text-danger" *ngIf="registerForm.controls['password']?.errors?.['minlength'] && registerForm.controls['password']?.touched">
+            *Password must be at least 6 characters long
+          </span>
+        </div>
+  
+        <div class="d-grid">
+          <button type="submit" [disabled]="registerForm.invalid" (click)="register()" class="btn btn-primary btn-block mt-3 mb-4">
+            Register
+          </button>
+        </div>
+        <p>Already have an account? <a (click)="navigateToLogin()">Login</a></p>
+      </form>
+    </div>
+  </div>
+  

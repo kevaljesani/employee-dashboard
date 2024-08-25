@@ -12,4 +12,34 @@ form {
   input, select {
     margin-bottom: 10px;
   }
+
+  /* Custom styling for file display and remove button */
+.file-display {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.file-name {
+  flex-grow: 1;
+  color: #495057;
+  font-weight: 500;
+}
+
+.btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+}
+
+.form-control {
+  margin-top: 10px;
+}
+
+.text-danger {
+  font-size: 0.875em;
+}
   

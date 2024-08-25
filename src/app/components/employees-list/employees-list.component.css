@@ -9,3 +9,24 @@
     cursor: pointer;
   }
   
+
+  .play_arrow{
+    color: darkgreen;
+    cursor: pointer;
+    
+  }
+
+  /* Optional: Styling for pagination controls */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  cursor: pointer;
+}

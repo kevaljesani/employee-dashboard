@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { AddEmployeesComponent } from "./components/add-employees/add-employees.component";
 import { CommonModule } from '@angular/common';
 import { EmployeesListComponent } from "./components/employees-list/employees-list.component";
+import { LoginComponent } from "./components/auth/login/login.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AddEmployeesComponent, CommonModule, EmployeesListComponent],
+  imports: [RouterOutlet, AddEmployeesComponent, CommonModule, EmployeesListComponent, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

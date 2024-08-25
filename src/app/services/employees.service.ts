@@ -13,8 +13,8 @@ export class EmployeeService {
     return this.http.post<any>(`${api_urls.authServiceApi}/create`,employee)
   }
 
-  getAllEmployeeList(){
-    return this.http.get<any>(`${api_urls.authServiceApi}/employee-list`)
+  getAllEmployeeList(page: number = 1, limit: number = 10){
+    return this.http.get<any>(`${api_urls.authServiceApi}/employee-list?page=${page}&limit=${limit}`)
   }
 
   editEmployeeDetails(employee:any,id:string){

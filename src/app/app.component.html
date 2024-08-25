@@ -4,6 +4,8 @@
         person_add
         </span>
 
+<app-login></app-login>
+
 <app-employees-list (edit)="openEditForm($event)" (employeeUpdated)="handleEmployeeUpdate($event)"></app-employees-list>
 
 <app-add-employees *ngIf="addEmployeeForm" [selectedEmployee]="selectedEmployee" (employeeUpdated)="handleEmployeeUpdate($event)" (cancel)="cancelForm()"></app-add-employees>

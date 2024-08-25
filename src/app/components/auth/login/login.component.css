@@ -1,0 +1,32 @@
+/* Ensure the form container takes up the full height of the viewport */
+.min-vh-100 {
+    min-height: 100vh; /* Full viewport height */
+  }
+  
+  /* Style for the form box */
+  .form-box {
+    background-color: #ffffff; /* White background */
+    max-width: 400px; /* Max width of the form box */
+    width: 100%; /* Full width up to the max-width */
+    padding: 20px; /* Padding inside the box */
+  }
+  
+  /* Style for form title */
+  .form-title {
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: #343a40; /* Dark color */
+  }
+  
+  /* Style for input fields */
+  .input {
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ced4da; /* Light border */
+  }
+  
+  /* Style for error messages */
+  .text-danger {
+    font-size: 12px; /* Smaller font size */
+    margin-top: 5px; /* Space above error message */
+  }
+  
